@@ -215,7 +215,16 @@ section { padding: 96px 0; }
 /* ==================== */
 /* TOOLS / SKILLS        */
 /* ==================== */
-.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.skill-card {
+  height: 100%;
+}
 .skill-card { background: var(--white); padding: 26px 24px 24px; border-radius: var(--radius); border: 1px solid var(--border); transition: var(--transition); }
 .skill-card:hover { border-color: var(--yellow); box-shadow: 0 14px 30px rgba(22,22,22,0.08); }
 .skill-card.wide { grid-column: span 3; }
